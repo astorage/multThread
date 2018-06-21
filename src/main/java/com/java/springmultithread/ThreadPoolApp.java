@@ -8,6 +8,9 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import java.util.concurrent.*;
 
 /**
+ * 应用场景：1、线程池执行很多任务，任务数量预知的情况，可以用spring管理任务对象，不需要new 任务对象
+ *           2、对于任务数量跟数据有关系，类似for循环的场景，也可以用spring管理task对象，
+ *              这样的获取spring的上下文，再获取stask的prototype对象 @see com.java.springmultithread.TheadPoolApp2
  * Copyright (c) 2013-2018 JOLLY INFORMATION TECHNOLOGY CO.LTD.
  * All rights reserved.
  * This software is the confidential and proprietary information of JOLLY
@@ -27,7 +30,11 @@ public class ThreadPoolApp {
     }
 
 
-
+    /**
+     * 测试用例：测试spring管理task，在task类中是否可以注入spring管理的对象，比如simpleService对象
+     * 测试结果：通过，spring管理的task，在task中可以注入spring管理的对象
+     *
+     */
     public static void test1(){
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("application.xml");
@@ -47,6 +54,9 @@ public class ThreadPoolApp {
 
     }
 
+    /**
+     * 任务对象用new产生的，在task类中是不能用spring注入对象。
+     */
     public static void test2(){
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("application.xml");
@@ -66,6 +76,9 @@ public class ThreadPoolApp {
 
     }
 
+    /**
+     * 手动new线程池ThreadPoolExecutor，spring管理task，在task中spring注入对象
+     */
     public static void test3(){
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("application.xml");
@@ -87,6 +100,9 @@ public class ThreadPoolApp {
     }
 
 
+    /**
+     * 线程池用ThreadPoolExecutor， 手动new任务对象，在任务对象中不能用spring注入对象
+     */
     public static void test4(){
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("application.xml");

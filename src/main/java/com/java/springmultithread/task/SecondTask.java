@@ -16,7 +16,6 @@ import org.springframework.stereotype.Component;
  * Created by boris on 2018/6/20.
  */
 
-@Component
 public class SecondTask implements Runnable {
 
     @Autowired

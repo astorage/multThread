@@ -42,4 +42,6 @@
     <bean id="runnabelTask" class="com.java.springmultithread.task.SecondTask" scope="prototype"/>
     <bean id="callableTask" class="com.java.springmultithread.task.FirstTask" scope="prototype"/>
 
+    <bean id="myApplicationObjectSupport" class="com.java.springmultithread.spring.MyApplicationObjectSupport"/>
+
 </beans>

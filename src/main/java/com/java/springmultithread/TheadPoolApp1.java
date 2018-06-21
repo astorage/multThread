@@ -7,10 +7,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 /**
+ * 测试用submit提交任务
  * Copyright (c) 2013-2018 JOLLY INFORMATION TECHNOLOGY CO.LTD.
  * All rights reserved.
  * This software is the confidential and proprietary information of JOLLY
@@ -23,8 +23,8 @@ import java.util.concurrent.Future;
 public class TheadPoolApp1 {
     public static void main(String[] args) {
         //test1();
-        //test2();
-        test3();
+        test2();
+        //test3();
     }
 
 
