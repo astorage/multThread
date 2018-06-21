@@ -11,13 +11,6 @@ import java.util.concurrent.*;
  * 应用场景：1、线程池执行很多任务，任务数量预知的情况，可以用spring管理任务对象，不需要new 任务对象
  *           2、对于任务数量跟数据有关系，类似for循环的场景，也可以用spring管理task对象，
  *              这样的获取spring的上下文，再获取stask的prototype对象 @see com.java.springmultithread.TheadPoolApp2
- * Copyright (c) 2013-2018 JOLLY INFORMATION TECHNOLOGY CO.LTD.
- * All rights reserved.
- * This software is the confidential and proprietary information of JOLLY
- * INFORMATION Technology CO.LTD("Confidential Information").  You shall not
- * disclose such Confidential Information and shall use it only in
- * accordance with the terms of the license agreement you entered into with JOLLY.
- * Website：http://www.jollycorp.com
  * Created by boris on 2018/6/20.
  */
 public class ThreadPoolApp {

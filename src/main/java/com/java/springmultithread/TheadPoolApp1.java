@@ -11,13 +11,6 @@ import java.util.concurrent.Future;
 
 /**
  * 测试用submit提交任务
- * Copyright (c) 2013-2018 JOLLY INFORMATION TECHNOLOGY CO.LTD.
- * All rights reserved.
- * This software is the confidential and proprietary information of JOLLY
- * INFORMATION Technology CO.LTD("Confidential Information").  You shall not
- * disclose such Confidential Information and shall use it only in
- * accordance with the terms of the license agreement you entered into with JOLLY.
- * Website：http://www.jollycorp.com
  * Created by boris on 2018/6/20.
  */
 public class TheadPoolApp1 {
