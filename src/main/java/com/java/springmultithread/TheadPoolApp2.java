@@ -42,9 +42,9 @@ public class TheadPoolApp2 {
         int i = 0;
         for (SimpleBO simpleBO : dataList) {
             FirstTask task = myContext.getBean("callableTask", FirstTask.class);
-            System.out.println("task"+ (i++) + "  " +task);
             task.setSimpleBO(simpleBO);
             pool.submit(task);
+            System.out.println("task"+ (i++) + "  " +task);
         }
     }
 
