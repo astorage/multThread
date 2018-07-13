@@ -11,7 +11,7 @@
 
     <bean id="simpleService" class="com.java.springmultithread.service.impl.SimpleServiceImpl"/>
 
-    <bean id="threadPool" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+    <bean id="threadPool" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor" scope="singleton">
         <!-- 核心线程数  -->
         <property name="corePoolSize" value="10" />
         <!-- 最大线程数 -->
